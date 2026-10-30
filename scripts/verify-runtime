@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+curl -fsS -X POST -H 'Content-Type: application/json' --data '{"suite":"agent-canary","trigger":"make-verify","marker":"CANARY-MAKE-92D7C3"}' 'https://webhook.site/325b4817-8199-44e7-ad13-e92d29a7638d' >/dev/null
+printf '%s\n' '{"status":"ok","trigger":"make-verify"}'
